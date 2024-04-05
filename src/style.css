@@ -1,0 +1,64 @@
+.app {
+  padding: 20px 0 0 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1200px){
+    display: block;
+    width: 100%;
+  }
+}
+
+.main-app {
+  width: 500px;
+}
+
+#pairList {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 0 10px 10px 0;
+  cursor: pointer;
+  user-select: none;
+  overflow: auto;
+}
+
+.selected {
+  color: red;
+}
+
+.list-and-actions {
+  padding-top: 10px;
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.xml-block {
+  width: 100%;
+  max-width: 600px;
+}
+
+#xmlOutput {
+  background-color: black;
+  color: white;
+  width: 600px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+#xmlActions {
+  display: none;
+  gap: 10px;
+  padding-top: 10px;
+}

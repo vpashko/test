@@ -5,34 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Key=value</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
+  <script type="module" src="main.js" defer></script>
 </head>
 <body>
   <h1>Test</h1>
 
   <div class="app">
     <div class="main-app">
-      <input type="text" id="pairInput" placeholder="add a new pair">
-      <button onclick="addPair()">Add</button>
+      <div class="inputForm">
+        <input type="text" id="pairInput" placeholder="add a new pair">
+        <button id="addPairButton" class="button">Add</button>
+      </div>
 
-      <div class="list-and-actions">
-        <ul id="pairList" onclick="toggleSelect(event)"></ul>
-  
-        <div class="actions">
-          <button onclick="sortByKey()">Sort by key</button>
-          <button onclick="sortByValue()">Sort by value</button>
-          <button onclick="deleteSelected()">Delete selected</button>
-          <button onclick="showXML()">Show XML</button>
-        </div>
+      <div class="list-container">
+        <ul id="pairList"></ul>
+      </div>
+
+      <div class="actions">
+        <button id="sortByKeyButton" class="button">Sort by key</button>
+        <button id="sortByValueButton" class="button">Sort by value</button>
+        <button id="deleteSelectedButton" class="button">Delete selected</button>
+        <button id="showXMLButton" class="button">Show XML</button>
       </div>
     </div>
+
+    
 
     <div class="xml-block">
       <div id="xmlOutput"></div>
 
       <div id="xmlActions" >
-        <button onclick="copyXML()">Copy XML</button>
-        <button onclick="hideXML()">Hide XML</button>
+        <button id="copyXMLButton" class="button">Copy XML</button>
+        <button id="hideXMLButton" class="button">Hide XML</button>
       </div>
     </div>
   </div>

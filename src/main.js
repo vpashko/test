@@ -1,3 +1,7 @@
+/*
+  This file is used to add eventListeners and connect logic to the file index
+*/
+
 import { addPair } from "./handlers/addPair.js";
 import { sortByKey } from "./handlers/sortByKey.js";
 import { sortByValue } from "./handlers/sortByValue.js";

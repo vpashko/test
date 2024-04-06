@@ -3,15 +3,15 @@ export function sortByKey() {
   const items = pairList.getElementsByClassName('pairItem');
   const itemsArray = Array.from(items);
 
-  const sortedItemsArray = itemsArray.sort((a, b) => {
+  const sortedItemsArray = itemsArray.sort((a, b) => { // Sort the items by key
     const aText = a.textContent.split('=')[0];
-    const bText = b.textContent.split('=')[0];
+    const bText = b.textContent.split('=')[0]; 
 
-    return aText.localeCompare(bText);
+    return aText.localeCompare(bText); // Compare the keys
   });
 
-  pairList.innerHTML = '';
+  pairList.innerHTML = ''; // Clear the pairList
   sortedItemsArray.forEach((item) => {
-    pairList.appendChild(item);
+    pairList.appendChild(item); // Append the sorted items to the pairList
   });
 }

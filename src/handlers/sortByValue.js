@@ -3,7 +3,7 @@ export function sortByValue() {
   const items = pairList.getElementsByClassName('pairItem');
   const itemsArray = Array.from(items);
 
-  const sortedItemsArray = itemsArray.sort((a, b) => {
+  const sortedItemsArray = itemsArray.sort((a, b) => { // Sort the items by value
     const aText = a.textContent.split('=')[1];
     const bText = b.textContent.split('=')[1];
 
@@ -12,6 +12,6 @@ export function sortByValue() {
 
   pairList.innerHTML = '';
   sortedItemsArray.forEach((item) => {
-    pairList.appendChild(item);
+    pairList.appendChild(item); // Append the sorted items to the pairList
   });
 }
